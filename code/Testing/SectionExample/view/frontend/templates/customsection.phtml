@@ -1,0 +1,21 @@
+<div class="wk-customsection"data-bind="scope: 'section'">
+    <p data-bind="text: customsection().msg"></p>
+</div>
+<style>
+    .wk-customsection{
+        display: inline-block;
+    }
+</style>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "section": {
+                        "component": "Testing_SectionExample/js/section"
+                    }
+                }
+            }
+        }
+    }
+</script>

@@ -5,6 +5,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Lof_CustomerAvatar',
+    'Testing_SectionExample',
     __DIR__
 );
