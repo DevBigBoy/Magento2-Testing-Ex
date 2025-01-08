@@ -1,0 +1,43 @@
+type Mutation {
+    updateCustomerV2(input: CustomerV2Input!): CustomerOutputV2 @resolver(class: "Testing\\CustomerBypassEmail\\Model\\Resolver\\UpdateCustomerBypass")
+}
+
+input CustomerV2Input {
+    firstname: String
+    lastname: String
+    email: String
+}
+
+type CustomerOutputV2 {
+    customer: CustomerV2
+}
+
+type CustomerV2 {
+    firstname: String
+    lastname: String
+    suffix: String
+    email: String
+    custom_attributes: [CustomAttribute]
+    addresses: [CustomerAddress]
+}
+
+type CustomAttribute {
+    code: String
+    value: String
+}
+
+type CustomerAddress {
+    firstname: String
+    lastname: String
+    street: [String]
+    city: String
+    region: Region
+    postcode: String
+    country_code: String
+    telephone: String
+}
+
+type Region {
+    region_code: String
+    region: String
+}
